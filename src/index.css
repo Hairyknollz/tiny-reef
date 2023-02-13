@@ -45,8 +45,6 @@ code {
   cursor: pointer;
 }
 
-.navbar--buttons {}
-
 .navbar--buttons>button {
   font-size: 1.5rem;
   padding: 20px;
