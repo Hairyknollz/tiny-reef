@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from 'react'
+import Navbar from './components/Navbar.js'
+import TheGame from './components/TheGame.js'
+import Media from './components/Media.js'
+import GetTheGame from './components/GetTheGame.js'
+import ContactUs from './components/ContactUs.js'
+import TheFish from './components/TheFish.js'
+
+const PAGE_ELEMENTS = [
+  TheGame,
+  TheFish,
+  Media,
+  GetTheGame,
+  ContactUs
+]
 
 function App() {
+
+  const scrollRefs = useRef([]);
+
+  const renderSections = () => PAGE_ELEMENTS.map((Component, index) => <Component componentRef={(el) => (scrollRefs.current[index] = el)}/>)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav className='navbar--sticky'>
+        <Navbar scrollRef={scrollRefs}/>
+      </nav>
+      <main>
+        {renderSections()}
+      </main>
     </div>
   );
 }

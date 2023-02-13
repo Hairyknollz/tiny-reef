@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  height: 100%;
+  background-color: #349ecb;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +9,190 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.border {
+  border: 10px ridge #f2930d;
+  border-radius: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cyan;
+  border-bottom: 10px ridge #f2930d;
+}
+
+.navbar--sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.navbar--logo {
+  width: 75px;
+  height: 75px;
+  padding: 12.5px;
+  cursor: pointer;
+}
+
+.navbar--buttons {}
+
+.navbar--buttons>button {
+  font-size: 1.5rem;
+  padding: 20px;
+  margin: 10px;
+  border-color: #349ecb;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #f2930d;
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: #349ecb;
+}
+
+.navbar--buttons>button:hover {
+  color: white;
+  transform: scale(1.1) perspective(1px);
+}
+
+.body--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: 150px auto 0 auto;
+  scroll-margin-top: 175px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3rem;
+  margin: 100px 0 0 0;
+  text-decoration: underline;
+  color: #f2930d;
+  filter: drop-shadow(0 3px 1px #aa6709);
+  scroll-margin-top: 100px;
+}
+
+.section-header-top {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3rem;
+  margin: 25px 0 0 0;
+  text-decoration: underline;
+  color: #f2930d;
+  filter: drop-shadow(0 3px 1px #aa6709);
+  scroll-margin-top: 100px;
+
+}
+
+.trailer {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.gamedesc {
+  font-size: 2rem;
+  background-color: aqua;
+  justify-content: center;
+  margin: 0 20%;
+  padding: 30px;
+}
+
+.getthegame--body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  margin: 25px 0;
+
+}
+
+.getthegame--content {
+  background-color: aqua;
+}
+
+.getthegame--content>h3 {
+  text-align: center;
+  margin: 0 auto;
+  color: #f2930d;
+  filter: drop-shadow(0 3px 1px #aa6709);
+}
+
+.getthegame--body>h3 {
+  margin: 0 0 10px 0;
+}
+
+.form-container>p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 5px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px;
+}
+
+.form-group {
+  margin: 10px;
+}
+
+.input-field {
+  height: 25px;
+  width: 500px;
+  font-size: 1.5rem;
+  background-color: aqua;
+}
+
+.message-box {
+  width: 500px;
+  font-size: 1.5rem;
+  background-color: aqua;
+}
+
+.submit-button {
+  width: 550px;
+  font-size: 1.5rem;
+  background-color: #f2930d;
+  border-radius: 10px;
+}
+
+.fishContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fishContainer>img {
+  width: 200px;
+  height: 200px;
+}
+
+.fishContainer>h2 {
+  margin: 5px 0 25px 0;
+  color: #f2930d;
+  filter: drop-shadow(0 3px 1px #aa6709);
+}
+
+.fishSection {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 25px auto 0 auto;
+  width: 60%;
 }
