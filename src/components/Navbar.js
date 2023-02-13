@@ -1,6 +1,5 @@
 import React from 'react';
 import Logo from '../images/Logo.png'
-import Title from '../images/Title.png'
 import '../index.css'
 
 const NAVBAR_BUTTONS = [
